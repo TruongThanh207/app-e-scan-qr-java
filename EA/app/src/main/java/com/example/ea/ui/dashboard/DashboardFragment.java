@@ -1,29 +1,26 @@
 package com.example.ea.ui.dashboard;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
+
 import com.example.ea.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class DashboardFragment extends Fragment {
 
@@ -33,7 +30,7 @@ public class DashboardFragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-            ViewGroup container, Bundle savedInstanceState) {
+                             ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
                 new ViewModelProvider(this).get(DashboardViewModel.class);
 
@@ -55,7 +52,7 @@ public class DashboardFragment extends Fragment {
 
     private void getCompany() {
         final String[] count = new String[1];
-        ArrayList<String> data = new ArrayList<>();
+        final ArrayList<String> data = new ArrayList<>();
         database.collection("devices")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -84,7 +81,7 @@ public class DashboardFragment extends Fragment {
 
     private void getProductType() {
 
-        ArrayList<Object> data = new ArrayList<>();
+        final ArrayList<Object> data = new ArrayList<>();
         database.collection("devices")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -124,7 +121,7 @@ public class DashboardFragment extends Fragment {
                         int sum = 0;
                         if(task.isSuccessful()){
                             for(QueryDocumentSnapshot snap : task.getResult()){
-                               sum += Integer.parseInt(snap.getData().get("quantity").toString()) ;
+                                sum += Integer.parseInt(snap.getData().get("quantity").toString()) ;
                             }
                         }
                         productTotal.setText(String.valueOf(sum));

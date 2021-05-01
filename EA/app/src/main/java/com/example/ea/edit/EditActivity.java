@@ -20,10 +20,10 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.firebase.firestore.SetOptions;
+
 
 import java.sql.Timestamp;
-import java.util.HashMap;
+
 
 public class EditActivity extends AppCompatActivity {
     EditText nameProduct, nameManufactory, dateProduct;
@@ -42,7 +42,7 @@ public class EditActivity extends AppCompatActivity {
 
         setData(result);
 
-        FirebaseFirestore database = FirebaseFirestore.getInstance();
+        final FirebaseFirestore database = FirebaseFirestore.getInstance();
 
 
         btnSave.setOnClickListener(new View.OnClickListener() {

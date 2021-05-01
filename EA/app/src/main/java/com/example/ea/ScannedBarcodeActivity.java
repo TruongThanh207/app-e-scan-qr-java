@@ -62,7 +62,7 @@ public class ScannedBarcodeActivity extends AppCompatActivity {
         });
     }
     private void setPermission(){
-        int permission = ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA);
+        int permission = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
         if(permission!= PackageManager.PERMISSION_GRANTED){
             makeRequest();
         }

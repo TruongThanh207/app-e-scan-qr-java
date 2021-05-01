@@ -1,11 +1,11 @@
 package com.example.ea.entity;
 
 public class Device {
-    String manufacture;
-    String productName;
-    String dateOfManufacture;
-    int quantity;
-    String timeStamp;
+    private String manufacture;
+    private String productName;
+    private String dateOfManufacture;
+    private int quantity;
+    private String timeStamp;
 
     public Device() {
     }
