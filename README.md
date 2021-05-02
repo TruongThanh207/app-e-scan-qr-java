@@ -21,3 +21,9 @@ Thanks for supporting me!
 ## Author
 
 - Truong Van Thanh - 17520062@gm.uit.edu.vn
+
+
+## Scan
+
+![image](https://user-images.githubusercontent.com/45113398/116818337-18d4ad00-ab95-11eb-95c6-1e2ef1cd75d7.png)
+
