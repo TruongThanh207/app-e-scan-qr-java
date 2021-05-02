@@ -20,7 +20,7 @@ Thanks for supporting me!
 
 ## Author
 
-- Truong Van Thanh - 17520062@gm.uit.edu.vn
+- Truong Van Thanh - 17521062@gm.uit.edu.vn
 
 
 ## Screen
