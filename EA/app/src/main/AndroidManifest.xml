@@ -11,9 +11,11 @@
         android:roundIcon="@drawable/apricot"
         android:supportsRtl="true"
         android:theme="@style/Theme.EA">
+        <activity android:name=".edit.UpdateActivity"
+            android:label="Update"></activity>
         <activity
             android:name=".edit.EditActivity"
-            android:label="EDIT" />
+            android:label="Edit" />
         <activity
             android:name=".ScannedBarcodeActivity"
             android:label="Scan" />

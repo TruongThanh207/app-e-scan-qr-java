@@ -1,6 +1,8 @@
 package com.example.ea.entity;
 
-public class Device {
+import java.io.Serializable;
+
+public class Device implements Serializable {
     private String manufacture;
     private String productName;
     private String dateOfManufacture;
@@ -54,5 +56,12 @@ public class Device {
         this.manufacture = manufacture;
         this.productName = productName;
         this.dateOfManufacture = dateOfManufactory;
+    }
+
+    public Device(String manufacture, String productName, String dateOfManufacture, int quantity) {
+        this.manufacture = manufacture;
+        this.productName = productName;
+        this.dateOfManufacture = dateOfManufacture;
+        this.quantity = quantity;
     }
 }
