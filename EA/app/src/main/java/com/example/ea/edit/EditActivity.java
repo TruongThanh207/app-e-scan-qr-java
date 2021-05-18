@@ -62,7 +62,8 @@ public class EditActivity extends AppCompatActivity {
 //                                        map.put("timeStamp",String.valueOf(timestamp.getTime()));
 //                                        database.collection("devices").document(document.getId()).set(map, SetOptions.merge());
                                         if(device.getManufacture().equals(document.getData().get("manufacture"))
-                                                && device.getProductName().equals(document.getData().get("productName")))
+                                                && device.getProductName().equals(document.getData().get("productName"))
+                                                && device.getDateOfManufacture().equals(document.getData().get("dateOfManufacture")))
                                         {
                                             //set quantity + 1 when we have same record
                                             device.setQuantity(Integer.parseInt(document.getData().get("quantity").toString()) + 1 );
